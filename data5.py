@@ -8,6 +8,7 @@ from scipy.spatial.distance import pdist, squareform
 from scipy import exp
 from scipy.linalg import eigh
 from sklearn.datasets import make_moons
+from matplotlib.ticker import Formatter
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
