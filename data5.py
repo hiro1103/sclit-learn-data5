@@ -9,6 +9,7 @@ from scipy import exp
 from scipy.linalg import eigh
 from sklearn.datasets import make_moons
 from matplotlib.ticker import Formatter
+from sklearn.datasets import make_circles
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
@@ -331,5 +332,11 @@ ax[0].set_ylabel('PC2')
 ax[1].set_ylim([-1, 1])
 ax[1].set_yticks([])
 ax[1].set_xlabel('PC1')
+plt.tight_layout()
+plt.show()
+
+X, y = make_circles(n_samples=1000, random_state=123, noise=0.1, factor=0.2)
+plt.scatter(X[y == 0, 0], X[y == 0, 1], color='red', marker='^', alpha=0.5)
+plt.scatter(X[y == 1, 0], X[y == 1, 1], color='blue', marker='o', alpha=0.5)
 plt.tight_layout()
 plt.show()
